@@ -126,11 +126,14 @@ Ejecutar paso por paso:
 ```bash
 # Paso 1: Descargar datos
 python 2ConexionADatos/connect_inegi.py
+```
+```bash
 
 # Paso 2: ETL y carga a PostgreSQL
 python 3PrepDatos/ETL_postgreSQL.py
-
-# Paso 3: para ver Análisis exploratorio (Jupyter)
+```
+```bash
+# (Opcional) Paso 3: para ver Análisis exploratorio (Jupyter)
 cd 4AnalisisExp
 jupyter notebook EDA.ipynb
 ```
