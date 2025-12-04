@@ -37,7 +37,7 @@ proyecto/
 │   └── ETL_postgreSQL.py         # Etapa 3: ETL y carga a PostgreSQL
 │
 ├── 4AnalisisExp/
-│   └── EDA.ipynb                 # Etapa 4: Análisis exploratorio
+│   └── EDA.ipynb                 # Etapa 4, 5, 6: Análisis exploratorio, Modelado básico, Conclusiones accionables
 │
 ├── requirements.txt              # Dependencias del proyecto
 └── README.md                     # Este archivo
@@ -108,34 +108,20 @@ DB_CONFIG = {
 
 ### 6. Configurar ruta del CSV
 
-Edita la ruta en **`3PrepDatos/ETL_postgreSQL.py`** (línea 28):
+Edita la ruta en **`3PrepDatos/ETL_postgreSQL.py`** en caso de error (línea 28):
 
 ```python
-CSV_PATH = 'ruta/a/tu/datos_accidentes_2018_2024.csv'  # ← CAMBIAR
+CSV_PATH = 'data\processed\inegi_tidy.csv'  # ← CAMBIAR
 ```
 
 ---
 
 ## 🚀 Ejecución del Proyecto
 
-### Opción 1: Ejecución Automática (Recomendado)
+### Ejecución Manual
+Con la carpeta correcta abierta, 
 
-Ejecuta el script principal que automáticamente ejecutará todas las etapas:
-
-```bash
-python run_project.py
-```
-
-Este script:
-- ✅ Verifica prerequisitos
-- ✅ Ejecuta la descarga de datos (connect_inegi.py)
-- ✅ Ejecuta el ETL y carga a PostgreSQL (ETL_postgreSQL.py)
-- ✅ Genera un reporte final con tiempos de ejecución
-- ✅ Te indica si hubo errores y dónde
-
-### Opción 2: Ejecución Manual
-
-Si prefieres ejecutar paso por paso:
+Ejecutar paso por paso:
 
 ```bash
 # Paso 1: Descargar datos
@@ -144,7 +130,7 @@ python 2ConexionADatos/connect_inegi.py
 # Paso 2: ETL y carga a PostgreSQL
 python 3PrepDatos/ETL_postgreSQL.py
 
-# Paso 3: Análisis exploratorio (Jupyter)
+# Paso 3: para ver Análisis exploratorio (Jupyter)
 cd 4AnalisisExp
 jupyter notebook EDA.ipynb
 ```
@@ -179,10 +165,10 @@ jupyter notebook EDA.ipynb
 ### Hallazgos Clave:
 
 1. **Vehículo más involucrado en accidentes:** Automóvil (65,071 accidentes)
-2. **Vehículo más mortal por accidente:** Bicicleta (2.59% mortalidad)
-3. **Causa principal:** [Se determina en el análisis]
-4. **Hora más peligrosa:** [Se determina en el análisis]
-5. **Combinaciones más mortales:** [Se determinan en el modelado]
+2. **Vehículo más mortal por accidente:** Omnibus (por cada 100 accidentes hay casi 3 muertos)
+3. **Causa principal:** Por el error del conductor
+4. **Hora más peligrosa:** Las 14:00 horas
+5. **Combinaciones más mortales:** En motocicleta, camioneta y Otro Vehiculo la mayoria de accidentes son por culpa del peaton o pasajero
 
 ---
 
@@ -241,15 +227,6 @@ df = pd.read_sql(query, engine)
 pip install -r requirements.txt
 ```
 
-### Error: "Invalid input syntax for type integer"
-
-**Solución:**
-- El ETL ahora limpia automáticamente estos errores
-- Verifica que tu CSV tenga los headers correctos
-- Ejecuta de nuevo `python ETL_postgreSQL.py`
-
----
-
 ## 📚 Dependencias Principales
 
 - **pandas** - Análisis de datos
@@ -263,9 +240,9 @@ pip install -r requirements.txt
 
 ## 👤 Autor
 
-**[Tu Nombre]**  
-Maestría en [Tu Programa]  
-Universidad: [Tu Universidad]  
+**Mario Alejandro Castro Lerma**  
+Maestría en Ciencias de Datos 
+Universidad: Universidad de Sonora 
 Fecha: Diciembre 2024
 
 ---
@@ -276,19 +253,9 @@ Este proyecto utiliza datos abiertos del INEGI bajo licencia de datos abiertos d
 
 ---
 
-## 🙏 Agradecimientos
+## Agradecimientos
 
 - **INEGI** - Por proporcionar los datos abiertos
-- **PostgreSQL** - Sistema de base de datos
-- **Python Data Science Stack** - Herramientas de análisis
-
----
-
-## 📞 Contacto
-
-Para preguntas o sugerencias sobre este proyecto:
-- Email: [tu_email@ejemplo.com]
-- GitHub: [tu-usuario]
 
 ---
 
