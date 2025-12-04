@@ -32,14 +32,13 @@ proyecto/
 │
 ├── 2ConexionADatos/
 │   └── connect_inegi.py          # Etapa 2: Descarga de datos de INEGI
-│
+│   └── info_datos.md
 ├── 3PrepDatos/
 │   └── ETL_postgreSQL.py         # Etapa 3: ETL y carga a PostgreSQL
 │
 ├── 4AnalisisExp/
 │   └── EDA.ipynb                 # Etapa 4: Análisis exploratorio
 │
-├── run_project.py                # 🚀 Script principal de ejecución automática
 ├── requirements.txt              # Dependencias del proyecto
 └── README.md                     # Este archivo
 ```
