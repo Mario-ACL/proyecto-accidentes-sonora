@@ -1,0 +1,28 @@
+# ============================================================================
+# PROYECTO: Análisis de Accidentes de Tránsito en Hermosillo, Sonora
+# Autor: [Tu nombre]
+# ============================================================================
+
+# Análisis de datos
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Base de datos
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+
+# Visualización
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Machine Learning y Estadística
+scikit-learn>=1.3.0
+scipy>=1.11.0
+
+# Jupyter (opcional, solo para desarrollo)
+jupyter>=1.0.0
+ipykernel>=6.25.0
+
+# Utilidades
+requests>=2.31.0
+tqdm>=4.66.0
