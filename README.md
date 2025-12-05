@@ -7,7 +7,7 @@ Este proyecto analiza los accidentes de tránsito en Sonora, durante el período
 **Pregunta de investigación:**  
 *¿Cuál es el vehículo más peligroso de manejar en Sonora y cuáles son las causas?*
 
-Si solo quieres ver los resultados rapidamente ve a 4AnalisisExp\EDA.ipynb y ve la libreta desde Github web.
+Si solo quieres ver los resultados rapidamente ve a 4AnalisisExp\EDA.ipynb y ve la libreta desde Github web (Algunos bloques de Markdown no se renderizan correctamente en web).
 
 ---
 
