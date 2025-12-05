@@ -1,8 +1,6 @@
 """
 PROYECTO: Análisis de Accidentes de Tránsito en Hermosillo, Sonora
-ETAPA 2: COMPRENSIÓN Y CONEXIÓN A LOS DATOS (CRISP-DM)
-Autor: [Tu nombre]
-Fecha: Diciembre 2024
+ETAPA 3: COMPRENSIÓN Y CONEXIÓN A LOS DATOS (CRISP-DM)
 """
 
 import pandas as pd
@@ -516,14 +514,6 @@ def main():
     # Validación
     if engine is not None:
         validar_carga(engine)
-        
-        print("\n🎉 ETAPA 2 COMPLETADA CON ÉXITO")
-        print("\nSiguientes pasos:")
-        print("  ✓ Base de datos creada y poblada")
-        print("  → Etapa 3: Preparación de los datos")
-        print("  → Etapa 4: Análisis exploratorio de datos (EDA)")
-        print("  → Etapa 5: Modelado (opcional)")
-        print("  → Etapa 6: Conclusiones y recomendaciones")
         
         return engine, df_hermosillo
     
